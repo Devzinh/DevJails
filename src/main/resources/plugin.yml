@@ -1,0 +1,139 @@
+name: DevJails
+version: ''
+main: br.com.devjails.DevJailsPlugin
+api-version: '1.18'
+prefix: DevJails
+authors: [ DevJails Team ]
+description: Sistema completo de prisões para servidores Minecraft com suporte a múltiplas cadeias, fiança e restrições.
+website: https://github.com/devjails/devjails
+
+depend: [Vault]
+softdepend: [WorldEdit, WorldGuard]
+
+commands:
+  djails:
+    description: Gerencia o sistema de prisões
+    usage: /djails help
+    aliases: [djail, dprisao]
+
+permissions:
+  djails.admin:
+    description: Acesso completo ao sistema de prisões
+    default: op
+    children:
+      - djails.help
+      - djails.setjail
+      - djails.deletejail
+      - djails.list
+      - djails.jail
+      - djails.tempjail
+      - djails.unjail
+      - djails.duration
+      - djails.setspawn
+      - djails.handcuff
+      - djails.wand
+      - djails.setflag
+      - djails.deleteflag
+      - djails.flagpreview
+      - djails.link
+      - djails.bail.set
+      - djails.bail.remove
+      - djails.bail.gui
+      - djails.prisoners
+      - djails.reload
+  
+  djails.help:
+    description: Ver ajuda dos comandos
+    default: true
+  
+  djails.setjail:
+    description: Criar/definir uma cadeia
+    default: op
+  
+  djails.deletejail:
+    description: Deletar uma cadeia
+    default: op
+  
+  djails.list:
+    description: Listar cadeias ou prisioneiros
+    default: true
+  
+  djails.jail:
+    description: Prender um jogador permanentemente
+    default: op
+  
+  djails.tempjail:
+    description: Prender um jogador temporariamente
+    default: op
+  
+  djails.unjail:
+    description: Soltar um jogador
+    default: op
+  
+  djails.duration:
+    description: Ver tempo restante de prisão
+    default: true
+  
+  djails.extend:
+    description: Estender tempo de prisão
+    default: op
+  
+  djails.setspawn:
+    description: Definir spawn de liberação
+    default: op
+  
+  djails.handcuff:
+    description: Algemar um jogador
+    default: op
+  
+  djails.wand:
+    description: Obter varinha de seleção
+    default: op
+  
+  djails.setflag:
+    description: Criar/definir uma área (flag)
+    default: op
+  
+  djails.deleteflag:
+    description: Deletar uma área (flag)
+    default: op
+  
+  djails.flagpreview:
+    description: Pré-visualizar uma área (flag)
+    default: op
+  
+  djails.link:
+    description: Vincular cadeia a uma área
+    default: op
+  
+  djails.bail.set:
+    description: Definir fiança para um prisioneiro
+    default: op
+  
+  djails.bail.remove:
+    description: Remover fiança de um prisioneiro
+    default: op
+  
+  djails.bail.gui:
+    description: Abrir GUI de fianças
+    default: true
+  
+  djails.prisoners:
+    description: Gerenciar prisioneiros via GUI
+    default: op
+  
+  djails.reload:
+    description: Recarregar configurações
+    default: op
+  
+  djails.bypass.restrictions:
+    description: Ignorar restrições de prisioneiro
+    default: false
+  
+  djails.bypass.escape:
+    description: Ignorar punições de fuga
+    default: false
+  
+  djails.bypass.commands:
+    description: Ignorar bloqueio de comandos
+    default: false

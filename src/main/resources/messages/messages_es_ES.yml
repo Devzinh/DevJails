@@ -1,0 +1,307 @@
+# Mensajes de DevJails - Español
+# Placeholders disponibles: {player}, {jail}, {reason}, {time_left}, {bail}, {staff}, {duration}, {amount}, etc.
+
+# ========== GENERAL ==========
+prefix: "§6[§eDevJails§6] "
+no_permission: "§c¡No tienes permiso para usar este comando!"
+player_not_found: "§c¡Jugador '{player}' no encontrado!"
+player_offline: "§c¡El jugador '{player}' está desconectado!"
+command_only_player: "§c¡Este comando solo puede ser usado por jugadores!"
+invalid_number: "§cNúmero inválido: {number}"
+invalid_duration: "§cDuración inválida: {duration}. Usa el formato: 1d2h30m15s"
+
+# ========== AYUDA ==========
+help_header: "§6§l========== §eDevJails §6§l=========="
+help_footer: "§6§l=========================="
+help_jail: "§6/djails jail <jugador> <cárcel> <motivo> §7- Encarcelar jugador permanentemente"
+help_tempjail: "§6/djails tempjail <jugador> <cárcel> [tiempo] <motivo> §7- Encarcelar temporalmente"
+help_unjail: "§6/djails unjail <jugador> §7- Liberar jugador"
+help_duration: "§6/djails duration [jugador] §7- Ver tiempo restante"
+help_setjail: "§6/djails set jail <nombre> §7- Crear cárcel en tu ubicación"
+help_deletejail: "§6/djails delete jail <nombre> §7- Eliminar cárcel"
+help_listjails: "§6/djails list jails §7- Listar todas las cárceles"
+help_listprisoners: "§6/djails list prisoners §7- Gestionar prisioneros (GUI)"
+help_wand: "§6/djails wand §7- Obtener varita de selección"
+help_setflag: "§6/djails set flag <nombre> §7- Crear área con selección actual"
+help_deleteflag: "§6/djails delete flag <nombre> §7- Eliminar área"
+help_flagpreview: "§6/djails flagpreview <nombre> §7- Vista previa del área"
+help_link: "§6/djails link <cárcel> <flag|wg:region> §7- Vincular cárcel con área"
+help_handcuff: "§6/djails handcuff <jugador> §7- Esposar jugador"
+
+help_bail_set: "§6/djails bail set <jugador> <cantidad> §7- Establecer fianza"
+help_bail_remove: "§6/djails bail remove <jugador> §7- Quitar fianza"
+help_bail_gui: "§6/djails bail gui §7- Abrir GUI de fianzas"
+help_list: "§6/djails list <jails|prisoners> §7- Listar cárceles o prisioneros"
+help_spawn: "§6/djails spawn <jugador> <world_spawn|original_location> §7- Ubicación tras liberación"
+help_reload: "§6/djails reload §7- Recargar configuración"
+
+# ========== CÁRCELES ==========
+jail_created: "§a¡La cárcel '{jail}' ha sido creada con éxito!"
+jail_updated: "§a¡La cárcel '{jail}' ha sido actualizada!"
+jail_deleted: "§a¡La cárcel '{jail}' ha sido eliminada!"
+jail_not_found: "§c¡Cárcel '{jail}' no encontrada!"
+jail_already_exists: "§c¡Ya existe una cárcel llamada '{jail}'!"
+jail_list_header: "§6§lCárceles disponibles:"
+jail_list_item: "§7- §e{jail} §7(Mundo: {world})"
+jail_list_empty: "§c¡No se encontraron cárceles!"
+
+# ========== ENCARCELAMIENTOS ==========
+player_jailed: "§c¡{player} ha sido encarcelado en '{jail}' por {staff}!"
+player_jailed_temp: "§c¡{player} ha sido encarcelado en '{jail}' por {duration} por {staff}!"
+player_unjailed: "§a¡{player} ha sido liberado de la cárcel por {staff}!"
+player_already_jailed: "§c¡El jugador {player} ya está encarcelado!"
+player_not_jailed: "§c¡El jugador {player} no está encarcelado!"
+jail_notify_player: "§c¡Has sido encarcelado en '{jail}'!"
+jail_notify_reason: "§cMotivo: §f{reason}"
+jail_notify_staff: "§cStaff: §f{staff}"
+jail_notify_duration: "§cTiempo: §f{duration}"
+jail_notify_permanent: "§cTiempo: §fPermanente"
+unjail_notify_player: "§a¡Has sido liberado de la cárcel!"
+jail_expired: "§a¡Has sido liberado de la cárcel - tiempo expirado!"
+
+# ========== DURACIÓN ==========
+duration_self: "§eSerás liberado en: §f{time_left}"
+duration_other: "§e{player} será liberado en: §f{time_left}"
+duration_permanent: "§e¡Estás encarcelado permanentemente!"
+duration_permanent_other: "§e¡{player} está encarcelado permanentemente!"
+duration_not_jailed: "§c¡No estás encarcelado!"
+duration_other_not_jailed: "§c¡El jugador {player} no está encarcelado!"
+
+# ========== ÁREAS/FLAGS ==========
+flag_created: "§a¡Área '{flag}' creada con éxito!"
+flag_updated: "§a¡Área '{flag}' actualizada!"
+flag_deleted: "§a¡Área '{flag}' eliminada!"
+flag_not_found: "§c¡Área '{flag}' no encontrada!"
+flag_already_exists: "§c¡Ya existe un área llamada '{flag}'!"
+flag_preview_start: "§aVisualizando área '{flag}' por 10 segundos..."
+flag_preview_end: "§eVista previa del área '{flag}' terminada."
+jail_linked: "§a¡Cárcel '{jail}' vinculada al área '{area}'!"
+jail_unlinked: "§a¡Cárcel '{jail}' desvinculada del área!"
+link_invalid_format: "§c¡Formato inválido! Usa: flag:nombre o wg:region"
+
+# ========== SELECCIÓN ==========
+wand_given: "§a¡Varita de selección obtenida! Clic izquierdo = pos1, clic derecho = pos2"
+wand_name: "§6Varita DevJails"
+wand_lore:
+  - "§7Clic izquierdo: §eEstablecer posición 1"
+  - "§7Clic derecho: §eEstablecer posición 2"
+selection_pos1: "§aPos1 establecida: §f{x}, {y}, {z}"
+selection_pos2: "§aPos2 establecida: §f{x}, {y}, {z}"
+selection_incomplete: "§c¡Selección incompleta! Usa la varita para establecer pos1 y pos2."
+selection_different_worlds: "§c¡Las posiciones deben estar en el mismo mundo!"
+selection_too_large: "§c¡Selección demasiado grande! Máximo: {max} bloques"
+selection_volume: "§eVolumen seleccionado: §f{volume} bloques"
+
+# ========== ESPOSAS ==========
+handcuff_applied: "§c¡{player} ha sido esposado!"
+handcuff_removed: "§a¡Las esposas de {player} han sido removidas!"
+handcuff_notify: "§c¡Has sido esposado!"
+
+already_handcuffed: "§c¡El jugador {player} ya está esposado!"
+not_handcuffed: "§c¡El jugador {player} no está esposado!"
+
+# ========== FIANZA ==========
+bail_enabled_vault_missing: "§c¡Sistema de fianzas deshabilitado - Vault no encontrado!"
+bail_set: "§a¡Fianza de §f${amount} §aestablecida para {player}!"
+bail_removed: "§a¡Fianza removida de {player}!"
+bail_not_set: "§c¡El jugador {player} no tiene fianza establecida!"
+bail_paid_success: "§a¡Has pagado §f${amount} §ade fianza por {player}!"
+bail_paid_notify: "§a¡{staff} pagó tu fianza de §f${amount}! ¡Has sido liberado!"
+bail_insufficient_funds: "§c¡No tienes suficiente dinero! Requerido: §f${amount}"
+bail_gui_title: "§aPrisioneros con Fianza"
+bail_gui_item_name: "§e{player}"
+bail_gui_item_lore:
+  - "§7Cárcel: §f{jail}"
+  - "§7Motivo: §f{reason}"
+  - "§7Staff: §f{staff}"
+  - "§7Tiempo restante: §f{time_left}"
+  - ""
+  - "§7Fianza: §a${bail}"
+  - ""
+  - "§e¡Clic para pagar fianza!"
+
+# ========== GUI FIANZA ==========
+bail_gui_no_prisoners: "§c¡No hay prisioneros con fianza disponibles!"
+
+# ========== RESTRICCIONES ==========
+restriction_command_blocked: "§c¡Este comando está bloqueado para prisioneros!"
+restriction_break_blocked: "§c¡No puedes romper bloques en la cárcel!"
+restriction_place_blocked: "§c¡No puedes colocar bloques en la cárcel!"
+restriction_interact_blocked: "§c¡No puedes interactuar con eso en la cárcel!"
+restriction_chat_blocked: "§c¡No puedes chatear mientras estás encarcelado!"
+restriction_pvp_blocked: "§c¡El PvP no está permitido en la cárcel!"
+
+# ========== FUGA ==========
+escape_attempt: "§c¡Intento de fuga detectado!"
+escape_teleported: "§c¡Has sido teletransportado de vuelta a la cárcel!"
+escape_time_extended: "§c¡Tu tiempo de cárcel ha sido extendido por {time}!"
+escape_fined: "§c¡Has sido multado con ${amount} por intentar escapar!"
+escape_logged: "§8[FUGA] {player} intentó escapar de la cárcel '{jail}'"
+
+# Mensajes de título para escape
+escape_title: "§c§l⚠ INTENTO DE ESCAPE ⚠"
+
+# Transmisión opcional para staff (deshabilitada por defecto)
+escape_broadcast: "§c[ESCAPE] §f{player} §cintentó escapar de la cárcel §e{jail}§c!"
+
+# ========== SPAWN ==========
+spawn_choice_set: "§aUbicación de spawn de liberación establecida: §f{choice}"
+spawn_choice_world: "§aSpawn del mundo"
+spawn_choice_original: "§aUbicación original"
+spawn_invalid_choice: "§c¡Opción inválida! Usa: world_spawn o original_location"
+
+# ========== GUI GENERAL ==========
+gui_previous_page: "§7« Página anterior"
+gui_next_page: "§7Página siguiente »"
+gui_current_page: "§ePágina {page} de {total}"
+gui_close: "§cCerrar"
+gui_back: "§7« Atrás"
+
+# ========== GUI PRISIONEROS ==========
+prisoners_gui_title: "§cGestionar Prisioneros"
+prisoners_gui_item_name: "§c{player}"
+prisoners_gui_item_lore:
+  - "§7Cárcel: §f{jail}"
+  - "§7Motivo: §f{reason}"
+  - "§7Staff: §f{staff}"
+  - "§7Tiempo restante: §f{time_left}"
+  - "§7Fianza: §f{bail_status}"
+  - ""
+  - "§eClic izquierdo: §7Opciones"
+  - "§eShift+Clic: §7Teletransportar"
+prisoners_gui_options_title: "§eOpciones - {player}"
+prisoners_gui_unjail: "§aLiberar prisionero"
+prisoners_gui_extend: "§eExtender tiempo"
+prisoners_gui_teleport: "§bTeletransportar a {player}"
+prisoners_gui_set_bail: "§aEstablecer fianza"
+prisoners_gui_remove_bail: "§cRemover fianza"
+prisoners_gui_no_prisoners: "§c¡No se encontraron prisioneros!"
+
+# ========== OTROS ==========
+reload_success: "§a¡Configuración recargada con éxito!"
+reload_failed: "§c¡Error al recargar la configuración!"
+storage_error: "§c¡Error del sistema de almacenamiento! Revisa los logs."
+plugin_disabled: "§c¡Plugin siendo deshabilitado debido a errores críticos!"
+time_format_seconds: "{seconds}s"
+time_format_minutes: "{minutes}m {seconds}s"
+time_format_hours: "{hours}h {minutes}m"
+time_format_days: "{days}d {hours}h"
+bail_status_enabled: "§a${amount}"
+bail_status_disabled: "§cNinguna"
+
+# ========== INTEGRACIÓN ==========
+worldedit_not_found: "§c¡WorldEdit no encontrado! Usando sistema de selección integrado."
+worldguard_not_found: "§c¡WorldGuard no encontrado! Vinculación WG no disponible."
+vault_not_found: "§c¡Vault no encontrado! Sistema de fianzas deshabilitado."
+
+# Paginación de ayuda
+help_pagination: "§e----- Página {page} de {total} -----§r §7Usa §e/djails help {next} §7para siguiente página"
+
+# ========== MENSAJES EXTRA ==========
+command_not_found: "§c¡Comando '{command}' no encontrado! Usa /djails help"
+command_error: "§c¡Error interno ejecutando comando!"
+command_usage: "§cUso correcto: {usage}"
+unjail_failed: "§c¡Falló al liberar prisionero!"
+handcuff_self_error: "§c¡No puedes esposarte a ti mismo!"
+handcuff_bypass: "§c¡El jugador {player} tiene permiso de bypass para esposas!"
+handcuff_error: "§c¡Error esposando jugador!"
+
+time_permanent: "§cPermanente"
+time_expired: "§aExpirado"
+duration_not_jailed_self: "§a¡No estás encarcelado!"
+duration_not_jailed_other: "§c¡El jugador {player} no está encarcelado!"
+duration_bail_info: "§7Fianza: §a${amount}"
+duration_staff_info: "§7Staff: §f{staff} §7el §f{date}"
+bail_processing: "§eProcesando pago..."
+bail_player_not_jailed: "§c¡El jugador {player} ya no está encarcelado!"
+bail_self_disabled: "§c¡No puedes pagar tu propia fianza!"
+bail_system_disabled: "§c¡Sistema de fianzas deshabilitado!"
+bail_payment_failed: "§c¡Pago de fianza falló!"
+bail_payment_error: "§c¡Error procesando pago!"
+bail_freed_by_other: "§a¡Has sido liberado de la cárcel! Fianza pagada por {player}."
+bail_set_notify: "§aFianza de §f${amount} §aha sido establecida para ti."
+bail_removed_notify: "§aTu fianza ha sido removida."
+bail_set_failed: "§c¡Falló al establecer fianza!"
+bail_remove_failed: "§c¡Falló al remover fianza!"
+teleported_to_prisoner: "§a¡Teletransportado a {player}!"
+use_extend_command: "§eUsa comando: {command}"
+use_bail_command: "§eUsa comando: {command}"
+extend_time_instruction: "§eEscribe en el chat el tiempo adicional para {player} (ej: 1h30m):"
+set_bail_instruction: "§eEscribe en el chat la cantidad de fianza para {player} (ej: 1000):"
+prisoners_list_empty: "§c¡No se encontraron prisioneros!"
+prisoners_list_header: "§6§lPrisioneros actuales:"
+jail_success: "§a¡{player} ha sido encarcelado en {jail} exitosamente!"
+jail_failed: "§c¡Error al encarcelar a {player}!"
+jail_error: "§c¡Error interno procesando encarcelamiento!"
+jail_has_prisoners: "§c¡La cárcel '{jail}' tiene {count} prisioneros! Libéralos antes de eliminarla."
+flag_has_linked_jails: "§c¡El área '{flag}' está vinculada a cárceles: {jails}. Desvincúlalas primero."
+link_different_worlds: "§c¡La cárcel y el área deben estar en el mismo mundo!"
+worldguard_region_not_found: "§c¡Región de WorldGuard '{region}' no encontrada!"
+
+# Mensajes GUI
+gui_prisoner_item_lore_jail: "§7Cárcel: §f{jail}"
+gui_prisoner_item_lore_reason: "§7Motivo: §f{reason}"
+gui_prisoner_item_lore_staff: "§7Staff: §f{staff}"
+gui_prisoner_item_lore_time_left: "§7Tiempo restante: §f{time_left}"
+gui_prisoner_item_lore_bail_status: "§7Fianza: {bail_status}"
+gui_prisoner_item_lore_options: "§eClic izquierdo: §7Opciones"
+gui_prisoner_item_lore_teleport: "§eShift+Clic: §7Teletransportar"
+gui_prisoner_options_teleport_lore_1: "§7Clic para teletransportarte"
+gui_prisoner_options_teleport_lore_2: "§7a este prisionero."
+gui_prisoner_options_set_bail_lore_1: "§7Clic para establecer o cambiar"
+gui_prisoner_options_set_bail_lore_2: "§7la cantidad de fianza."
+gui_prisoner_options_set_bail_lore_3: ""
+gui_prisoner_options_set_bail_lore_4: "§7Cantidad actual: §f{bail_amount}"
+gui_prisoner_options_remove_bail_lore_1: "§7Clic para remover fianza"
+gui_prisoner_options_remove_bail_lore_2: "§7de este prisionero."
+gui_bail_item_lore_jail: "§7Cárcel: §f{jail}"
+gui_bail_item_lore_reason: "§7Motivo: §f{reason}"
+gui_bail_item_lore_bail_amount: "§7Fianza: §a${amount}"
+gui_bail_item_lore_click: "§e¡Clic para pagar fianza!"
+gui_bail_item_lore_required: "§7Necesitas §a${amount} §7en tu cuenta."
+gui_bail_refresh_lore_1: "§7Clic para actualizar la lista"
+gui_bail_refresh_lore_2: "§7de prisioneros con fianza."
+gui_no_bail_item: "§cNo se encontraron prisioneros con fianza"
+gui_bail_item_name: "§e{player}"
+gui_bail_refresh_name: "§aActualizar"
+
+# Mensajes de lista de prisioneros
+prisoners_list_item: "§7- §e{player} §7(Cárcel: {jail}, Tiempo: {time_left}, Fianza: {bail_status})"
+
+# ========== MENSAJES GUI ==========
+prisoners_gui_options_title: "§8Opciones - §e{player}"
+prisoners_gui_unjail: "§aLiberar Prisionero"
+prisoners_gui_extend: "§eExtender Tiempo"
+prisoners_gui_teleport: "§bTeletransportar a {player}"
+prisoners_gui_set_bail: "§6Establecer Fianza"
+prisoners_gui_remove_bail: "§cRemover Fianza"
+gui_back: "§7« Atrás"
+gui_close: "§cCerrar"
+
+# Protección contra auto-encarcelamiento
+cannot_jail_self: "§c¡No puedes usar este comando en ti mismo!"
+
+# ========== MENSAJES CONSOLIDADOS ==========
+# Notificación de cárcel consolidada
+jail_notification_full: "§c🔒 ¡ENCARCELADO! §7Cárcel: §e{jail} §7| Razón: §f{reason} §7| Staff: §e{staff} §7| Tiempo: §f{duration}"
+
+# Notificación de escape consolidada
+escape_notification_full: "§c⚠ ¡INTENTO DE ESCAPE! {teleport_msg}{fine_msg}{time_extended_msg}"
+escape_teleport_part: "§7Teletransportado de vuelta."
+escape_fine_part: "§7Multa: §c${amount}."
+escape_time_extended_part: "§7Tiempo extendido: §e{time}."
+
+# Mensajes de título para escape
+escape_title: "§c§l⚠ INTENTO DE ESCAPE ⚠"
+
+# Transmisión opcional para staff (deshabilitada por defecto)
+escape_broadcast: "§c[ESCAPE] §f{player} §cintentó escapar de la cárcel §e{jail}§c!"
+
+# ========== COMANDO EXTEND ==========
+extend_usage: "§cUso: /djails extend <jugador> <tiempo>"
+extend_success: "§a¡Tiempo de cárcel de §f{player} §aextendido por §e{time}§a! Nuevo tiempo restante: §f{new_time}"
+extend_notify: "§c¡Tu tiempo de cárcel ha sido extendido por §e{time} §cpor §f{staff}§c! Tiempo restante: §f{new_time}"
+extend_permanent_jail: "§c¡El jugador §f{player} §cestá en cárcel permanente y no puede tener el tiempo extendido!"
+extend_error: "§c¡Error al extender el tiempo de cárcel!"
+help_extend: "§6/djails extend <jugador> <tiempo> §7- Extender tiempo de cárcel"
+setspawn_success: "&aSpawn de liberación establecido exitosamente en &f{world} &a({x}, {y}, {z})&a!"

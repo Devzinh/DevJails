@@ -1,0 +1,310 @@
+# ========================================
+# DevJails - Main Configuration
+# ========================================
+
+# General settings
+general:
+  # Default language (en_US, pt_BR, es_ES, fr_FR, de_DE, ru_RU, pl_PL)
+  language: en_US
+  
+  # Storage system (YAML, SQLITE)
+  storage: YAML
+  
+  # Debug mode - shows detailed information in console
+  debug: false
+  
+  # Jail expiration check interval (in ticks, 20 ticks = 1 second)
+  expiration_check_interval: 20
+  
+  # Check for updates automatically
+  check-updates: true
+
+# Logging system
+logging:
+  # Verbose mode - shows detailed system information
+  verbose: false
+  
+  # Debug mode - shows debugging information
+  debug: false
+  
+  # Show detailed summary on startup
+  startup-summary: true
+  
+  # Minimalist startup mode (less console logs)
+  minimal-startup: false
+
+# Bail system (requires Vault)
+bail:
+  # Enable bail system
+  enabled: true
+  
+  # Default bail amount
+  default-amount: 1000000
+  
+  # Allow other players to pay bail
+  allow-others-pay: true
+  
+  # Bail GUI title
+  gui-title: "§aPrisoners with Bail"
+  
+  # Allow prisoners to pay their own bail
+  allow-self-bail: false
+  
+  # Log bail payments
+  log-bail-payments: true
+
+# Handcuffs system
+handcuffs:
+  # Enable handcuffs
+  enabled: true
+  
+  # Handcuff effects (slowness, blindness, etc)
+  effects:
+    - "SLOW:2"
+    - "SLOW_DIGGING:2"
+  
+  # Effects duration in seconds (-1 = permanent)
+  duration: -1
+  
+  # Slowness effect level (1-255)
+  slowness-level: 5
+  
+  # Darkness effect level (1-255) - available in 1.19+
+  darkness-level: 3
+  
+  # Use Mining Fatigue instead of Darkness for older versions
+  use-mining-fatigue: true
+  
+  # Mining Fatigue level if used
+  mining-fatigue-level: 4
+
+# Prisoner restrictions
+restrictions:
+  # Blocked commands list (use '*' to block all, or list specific ones)
+  blocked-commands:
+    [Previous command list remains unchanged]
+  
+  # Commands allowed even if in blocked list
+  allowed-commands:
+    - "/djails duration"
+    - "/help"
+    - "/list"
+  
+  # Block block breaking
+  block-break: true
+  
+  # Block block placing
+  block-place: true
+  
+  # Block interaction with blocks/items
+  block-interact: true
+  
+  # Block chat (true = cannot talk, false = can talk)
+  block-chat: false
+  
+  # Allow PvP in jail
+  pvp-enabled: false
+  
+  # Block item usage
+  block-item-use: true
+  
+  # Block sleeping
+  block-sleep: true
+  
+  # Block item dropping
+  block-item-drop: true
+  
+  # Block item pickup
+  block-item-pickup: true
+  
+  # Block global chat
+  block-chat: true
+  
+  # Block item interactions
+  block-interactions: true
+
+# Jail and escape settings
+jail:
+  # Default time for temporary jails when not specified (0 to disable)
+  default-temp-duration: "1h"
+  
+  # Escape settings
+  escape:
+    # Time added when player tries to escape (0 to disable)
+    extend-time: "5m"
+    
+    # Fine applied when player tries to escape (0 to disable)
+    fine-amount: 100000.0
+    
+    # Automatically teleport player back when leaving area
+    teleport-back: true
+    
+    # Log escape attempts in console
+    log-attempts: false
+    
+    # Send broadcast when player tries to escape
+    broadcast-attempts: false
+    
+    # Commands executed when player tries to escape
+    run-commands: []
+    
+    # Title settings for escape attempt
+    title:
+      # Enable custom title
+      enabled: true
+      
+      # Main title
+      main: "§c§l⚠ ESCAPE ATTEMPT ⚠"
+      
+      # Subtitle
+      subtitle: "§7You were caught trying to escape!"
+      
+      # Fade-in time (ticks)
+      fade-in: 10
+      
+      # Stay time (ticks)
+      stay: 60
+      
+      # Fade-out time (ticks)
+      fade-out: 20
+
+# Area settings
+areas:
+  # Enable escape detection
+  escape-detection: true
+  
+  # Escape attempt punishment
+  escape-punishment:
+    # Add extra time (in minutes)
+    # NOTE: This time will be added to jail.extend-on-escape
+    extra-time: 5
+    
+    # Execute commands as punishment
+    commands: []
+
+# Selection settings
+selection:
+  # Maximum allowed flag volume (0 = no limit)
+  max-flag-volume: 100000
+  
+  # Show particles during flag preview
+  show-particles: true
+  
+  # Preview duration in seconds
+  preview-duration: 10
+  
+  # Particle interval in ticks
+  particle-interval: 10
+
+# Discord integration (webhook)
+discord:
+  # Enable Discord integration
+  enabled: false
+  
+  # Discord webhook URL
+  webhook-url: ""
+  
+  # Events to send to Discord
+  events:
+    jail: true
+    unjail: true
+    escape: true
+    bail: true
+  
+  # Embed settings
+  embed:
+    color: 15158332  # Red color
+    title: "DevJails - Jail Event"
+    thumbnail: "https://mc-heads.net/avatar/{player}"
+
+# Performance settings
+performance:
+  # Use area cache for checks (improves performance)
+  use-area-cache: true
+  
+  # Area cache size
+  area-cache-size: 100
+  
+  # Cache time-to-live in seconds
+  area-cache-ttl: 300
+  
+  # Maximum prisoners per page in GUIs
+  max-prisoners-per-page: 45
+
+# Backup settings (YAML only)
+backup:
+  # Enable automatic backups
+  enabled: true
+  
+  # Backup interval in hours
+  interval-hours: 24
+  
+  # Maximum backups kept
+  max-backups: 7
+  
+  # Backup folder
+  folder: "backups"
+
+# Placeholder messages for other plugins
+placeholders:
+  # Placeholder when player is not jailed
+  not-jailed: "Free"
+  
+  # Time format for placeholders
+  time-format: "smart"  # smart, full, compact
+  
+  # Placeholder for undefined bail
+  no-bail: "Not set"
+
+# Advanced settings
+advanced:
+  # Save player's original location before jail
+  save-original-location: true
+  
+  # Allow jailing offline players
+  allow-offline-jail: true
+  
+  # Database operations timeout (seconds)
+  database-timeout: 30
+  
+  # Check for updates automatically (console notification only)
+  check-updates: true
+  
+  # bStats metrics (helps plugin development)
+  metrics: true
+
+# World-specific settings
+world-settings:
+  # Example world-specific configuration
+  # world_nether:
+  #   restrictions:
+  #     block-break: false
+  #     pvp-enabled: true
+  
+  # Default configuration for all worlds
+  default:
+    # Allow jail creation in this world
+    allow-jails: true
+    
+    # Allow flag creation in this world
+    allow-flags: true
+
+# Message settings
+messages:
+  # Default message type: "chat" or "title"
+  default-type: "title"
+  
+  # Title settings (when default-type is "title")
+  title:
+    fade-in: 10    # Ticks to appear
+    stay: 40       # Ticks to stay
+    fade-out: 10   # Ticks to disappear
+  
+  # Consolidate multiple messages into one
+  consolidate-notifications: true
+  
+  # Message cooldown in milliseconds
+  cooldown-ms: 10000
+  
+  # Show debug messages to admins
+  debug-for-admins: false
